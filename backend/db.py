@@ -6,10 +6,12 @@ backward compatibility across all models in AetherOS.
 import copy
 import uuid
 from datetime import datetime
+import os
 from pymongo import MongoClient
 
-# Connect to the local MongoDB instance
-client = MongoClient("mongodb://localhost:27017/")
+# Connect to the MongoDB instance via environment variable or default to local
+mongo_uri = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
+client = MongoClient(mongo_uri)
 db = client["aetheros"]
 
 class Collection:

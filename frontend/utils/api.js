@@ -1,5 +1,5 @@
 // AetherOS — API Utility
-const API_BASE = '';
+const API_BASE = '/api';
 
 async function api(endpoint, options = {}) {
   const token = localStorage.getItem('token');

@@ -45,16 +45,16 @@ def init_badges():
 
 init_badges()
 
-# Register Blueprints
-app.register_blueprint(auth_bp)
-app.register_blueprint(tasks_bp)
-app.register_blueprint(projects_bp)
-app.register_blueprint(meetings_bp)
-app.register_blueprint(study_bp)
-app.register_blueprint(analytics_bp)
-app.register_blueprint(ai_bp)
-app.register_blueprint(export_bp)
-app.register_blueprint(dashboard_bp)
+# Register Blueprints under /api for Vercel Serverless routing compatibility
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
+app.register_blueprint(tasks_bp, url_prefix='/api/tasks')
+app.register_blueprint(projects_bp, url_prefix='/api/projects')
+app.register_blueprint(meetings_bp, url_prefix='/api/meetings')
+app.register_blueprint(study_bp, url_prefix='/api/study')
+app.register_blueprint(analytics_bp, url_prefix='/api/analytics')
+app.register_blueprint(ai_bp, url_prefix='/api/ai')
+app.register_blueprint(export_bp, url_prefix='/api/export')
+app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
 
 # Serve frontend
 FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "..", "frontend")
