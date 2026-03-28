@@ -1,0 +1,79 @@
+[
+  {
+    "user_id": "13f0c829-2d23-4deb-96f5-fda78f5cef0a",
+    "name": "BMS Development",
+    "description": "This is the first customer project of me.",
+    "status": "Active",
+    "priority": "High",
+    "deadline": "2026-03-24",
+    "progress": 10,
+    "tasks": [],
+    "notes": [],
+    "files": [],
+    "team": [],
+    "parent_id": "",
+    "_id": "4b0e05e3-79b5-45aa-9e69-7b27ac78e363",
+    "created_at": "2026-03-22T18:27:59.576925",
+    "updated_at": "2026-03-22T18:29:38.834849"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "name": "AetherOS Platform",
+    "description": "",
+    "status": "Active",
+    "priority": "Critical",
+    "deadline": "2026-04-15",
+    "progress": 45,
+    "tasks": [],
+    "notes": [],
+    "files": [],
+    "team": [
+      "Alex",
+      "Sara",
+      "Mike"
+    ],
+    "parent_id": "",
+    "_id": "22210afd-e5d7-4521-91df-f6a5a6d4f5eb",
+    "created_at": "2026-03-22T18:30:28.503317",
+    "updated_at": "2026-03-22T18:30:28.503317"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "name": "Mobile App Redesign",
+    "description": "",
+    "status": "Active",
+    "priority": "High",
+    "deadline": "2026-04-01",
+    "progress": 72,
+    "tasks": [],
+    "notes": [],
+    "files": [],
+    "team": [
+      "Alex",
+      "Emma"
+    ],
+    "parent_id": "",
+    "_id": "179ba168-0130-47e8-a31f-c6e9487bf23b",
+    "created_at": "2026-03-22T18:30:28.503317",
+    "updated_at": "2026-03-22T18:30:28.503317"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "name": "Data Analytics Engine",
+    "description": "",
+    "status": "Planning",
+    "priority": "Medium",
+    "deadline": "2026-05-01",
+    "progress": 15,
+    "tasks": [],
+    "notes": [],
+    "files": [],
+    "team": [
+      "Alex"
+    ],
+    "parent_id": "",
+    "_id": "74c8c4e4-2e42-4a9e-9fe0-a6d05f44076b",
+    "created_at": "2026-03-22T18:30:28.516144",
+    "updated_at": "2026-03-22T18:30:28.516144"
+  }
+]

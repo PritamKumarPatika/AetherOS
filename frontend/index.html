@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AetherOS — AI-Powered Personal Office + Study Operating System. Manage tasks, projects, meetings, study, and analytics in one beautiful dashboard.">
+  <title>AetherOS — AI Productivity Platform</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css?v=2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=2">
+  <link rel="stylesheet" href="styles/dashboard.css?v=8">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages.css?v=25">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Anime.js v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0-beta.102.2/lib/anime.iife.min.js"></script>
+
+  <!-- Favicon (SVr) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><path d='M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Z' fill='%236C5CE7'/><circle cx='128' cy='128' r='56' fill='%236C5CE7'/></svg>">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- Loading state -->
+    <div class="loader-wrapper">
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Loading AetherOS...</p>
+    </div>
+  </div>
+
+  <!-- Utilities -->
+  <script src="utils/helpers.js?v=2"></script>
+  <script src="utils/router.js?v=2"></script>
+  <script src="utils/api.js?v=4"></script>
+
+  <!-- Components -->
+  <script src="components/sidebar.js?v=2"></script>
+  <script src="components/toast.js?v=2"></script>
+
+  <!-- Pages -->
+  <script src="pages/dashboard.js?v=3"></script>
+  <script src="pages/tasks.js?v=5"></script>
+  <script src="pages/projects.js?v=7"></script>
+  <script src="pages/meetings.js?v=3"></script>
+  <script src="pages/calendar.js?v=3"></script>
+  <script src="pages/study.js?v=13"></script>
+  <script src="pages/ai.js?v=4"></script>
+  <script src="pages/analytics.js?v=3"></script>
+  <script src="pages/settings.js?v=3"></script>
+
+  <!-- App Entry -->
+  <script src="app.js?v=2"></script>
+</body>
+</html>

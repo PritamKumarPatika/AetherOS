@@ -1,0 +1,80 @@
+[
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "subject_id": "0d01dcd4-3222-4ffc-ae7c-10679cf9ba18",
+    "name": "Neural Networks",
+    "status": "In Progress",
+    "difficulty": "Hard",
+    "revision_count": 0,
+    "last_revised": "",
+    "next_revision": "",
+    "_id": "a6a20180-8a8f-4ec7-9b44-19b3f75e83d5",
+    "created_at": "2026-03-22T18:30:28.580443",
+    "updated_at": "2026-03-22T18:30:28.580443"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "subject_id": "0d01dcd4-3222-4ffc-ae7c-10679cf9ba18",
+    "name": "Linear Regression",
+    "status": "Completed",
+    "difficulty": "Medium",
+    "revision_count": 0,
+    "last_revised": "",
+    "next_revision": "",
+    "_id": "a01a50fc-ab0d-42f1-a0da-a2b85f4029bd",
+    "created_at": "2026-03-22T18:30:28.581781",
+    "updated_at": "2026-03-22T18:30:28.581781"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "subject_id": "0d01dcd4-3222-4ffc-ae7c-10679cf9ba18",
+    "name": "Decision Trees",
+    "status": "Not Started",
+    "difficulty": "Easy",
+    "revision_count": 0,
+    "last_revised": "",
+    "next_revision": "",
+    "_id": "8c9b28ec-6a7d-45c5-be90-0584f10a2be9",
+    "created_at": "2026-03-22T18:30:28.591452",
+    "updated_at": "2026-03-22T18:30:28.591452"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "subject_id": "f384104f-ecbb-4a8e-9213-68c07c30c55a",
+    "name": "Binary Trees",
+    "status": "Completed",
+    "difficulty": "Medium",
+    "revision_count": 0,
+    "last_revised": "",
+    "next_revision": "",
+    "_id": "a20cd903-d29e-4c6c-9cbe-38c8c5c052c3",
+    "created_at": "2026-03-22T18:30:28.600641",
+    "updated_at": "2026-03-22T18:30:28.600641"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "subject_id": "f384104f-ecbb-4a8e-9213-68c07c30c55a",
+    "name": "Graph Algorithms",
+    "status": "In Progress",
+    "difficulty": "Hard",
+    "revision_count": 0,
+    "last_revised": "",
+    "next_revision": "",
+    "_id": "9ead119f-6dd6-4fad-876b-7a1634e0e0c1",
+    "created_at": "2026-03-22T18:30:28.613866",
+    "updated_at": "2026-03-22T18:30:28.613866"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "subject_id": "f384104f-ecbb-4a8e-9213-68c07c30c55a",
+    "name": "Hash Tables",
+    "status": "Not Started",
+    "difficulty": "Easy",
+    "revision_count": 0,
+    "last_revised": "",
+    "next_revision": "",
+    "_id": "376ed886-d9eb-42f6-a291-4572f4105e43",
+    "created_at": "2026-03-22T18:30:28.623981",
+    "updated_at": "2026-03-22T18:30:28.623981"
+  }
+]

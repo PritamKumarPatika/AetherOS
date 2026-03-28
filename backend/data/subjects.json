@@ -1,0 +1,22 @@
+[
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "name": "Machine Learning",
+    "exam_date": "2026-04-20",
+    "progress": 35,
+    "color": "#6C5CE7",
+    "_id": "0d01dcd4-3222-4ffc-ae7c-10679cf9ba18",
+    "created_at": "2026-03-22T18:30:28.569658",
+    "updated_at": "2026-03-22T18:30:28.569658"
+  },
+  {
+    "user_id": "8dc91dd2-0b8f-44de-9e7c-ddbe9cd3c00e",
+    "name": "Data Structures",
+    "exam_date": "2026-04-10",
+    "progress": 60,
+    "color": "#00B894",
+    "_id": "f384104f-ecbb-4a8e-9213-68c07c30c55a",
+    "created_at": "2026-03-22T18:30:28.570660",
+    "updated_at": "2026-03-22T18:30:28.570660"
+  }
+]
