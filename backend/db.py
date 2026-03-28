@@ -22,9 +22,9 @@ try:
     client = MongoClient(mongo_uri, serverSelectionTimeoutMS=5000)
     client.admin.command('ping')
     db = client["aetheros"]
-    print("✅ Connected to MongoDB")
+    print("[OK] Connected to MongoDB")
 except Exception as e:
-    print(f"⚠️ MongoDB unavailable: {e}. Using JSON file storage.")
+    print(f"[WARN] MongoDB unavailable: {e}. Using JSON file storage.")
     USE_MONGO = False
     
     # Create data directory for JSON storage
