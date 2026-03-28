@@ -35,40 +35,51 @@ def token_required(f):
 
 @auth_bp.route("/api/auth/register", methods=["POST"])
 def register():
-    data = request.get_json()
-    if not data or not data.get("email") or not data.get("password") or not data.get("name"):
-        return jsonify({"error": "Missing name, email, or password"}), 400
-        
-    user_result = register_user(data["name"], data["email"], data["password"])
-    if not user_result:
-        return jsonify({"error": "User with that email already exists"}), 409
-        
-    return jsonify({"success": True, "message": "User created successfully"}), 201
+    try:
+        data = request.get_json()
+        if not data or not data.get("email") or not data.get("password") or not data.get("name"):
+            return jsonify({"error": "Missing name, email, or password"}), 400
+            
+        user_result = register_user(data["name"], data["email"], data["password"])
+        if not user_result:
+            return jsonify({"error": "User with that email already exists"}), 409
+            
+        return jsonify({"success": True, "message": "User created successfully"}), 201
+    except Exception as e:
+        print(f"Register error: {str(e)}")
+        return jsonify({"error": f"Server error: {str(e)}"}), 500
 
 @auth_bp.route("/api/auth/login", methods=["POST"])
 def login():
-    data = request.get_json()
-    if not data or not data.get("email") or not data.get("password"):
-        # Temporary fallback for development if frontend hasn't updated to send credentials yet
-        user = get_or_create_default_user()
+    try:
+        data = request.get_json()
+        if not data or not data.get("email") or not data.get("password"):
+            # Temporary fallback for development if frontend hasn't updated to send credentials yet
+            user = get_or_create_default_user()
+            if not user:
+                return jsonify({"error": "Could not create default user"}), 500
+            token = jwt.encode({
+                "user_id": str(user["_id"]),
+                "exp": datetime.datetime.utcnow() + datetime.timedelta(days=7)
+            }, JWT_SECRET, algorithm="HS256")
+            user_data = {k: v for k, v in user.items() if k != "password"}
+            return jsonify({"success": True, "token": token, "user": user_data}), 200
+
+        user = verify_user(data["email"], data["password"])
+        if not user:
+            return jsonify({"error": "Invalid credentials"}), 401
+            
         token = jwt.encode({
             "user_id": str(user["_id"]),
             "exp": datetime.datetime.utcnow() + datetime.timedelta(days=7)
         }, JWT_SECRET, algorithm="HS256")
-        return jsonify({"success": True, "token": token, "user": user}), 200
-
-    user = verify_user(data["email"], data["password"])
-    if not user:
-        return jsonify({"error": "Invalid credentials"}), 401
         
-    token = jwt.encode({
-        "user_id": str(user["_id"]),
-        "exp": datetime.datetime.utcnow() + datetime.timedelta(days=7)
-    }, JWT_SECRET, algorithm="HS256")
-    
-    # Remove password hash from response
-    user_data = {k: v for k, v in user.items() if k != "password"}
-    return jsonify({"success": True, "token": token, "user": user_data}), 200
+        # Remove password hash from response
+        user_data = {k: v for k, v in user.items() if k != "password"}
+        return jsonify({"success": True, "token": token, "user": user_data}), 200
+    except Exception as e:
+        print(f"Login error: {str(e)}")
+        return jsonify({"error": f"Server error: {str(e)}"}), 500
 
 @auth_bp.route("/api/auth/user", methods=["GET"])
 @token_required

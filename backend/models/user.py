@@ -28,9 +28,8 @@ DEFAULT_USER = {
 def get_or_create_default_user():
     user = users.find_one({"email": DEFAULT_USER["email"]})
     if not user:
-        res = users.insert_one(DEFAULT_USER.copy())
-        return str(res["_id"])
-    return str(user["_id"])
+        user = users.insert_one(DEFAULT_USER.copy())
+    return user
 
 def register_user(name, email, password):
     if users.find_one({"email": email}):
