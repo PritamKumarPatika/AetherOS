@@ -33,7 +33,7 @@ def token_required(f):
         return f(current_user, *args, **kwargs)
     return decorated
 
-@auth_bp.route("/api/auth/register", methods=["POST"])
+@auth_bp.route("/register", methods=["POST"])
 def register():
     try:
         data = request.get_json()
@@ -49,7 +49,7 @@ def register():
         print(f"Register error: {str(e)}")
         return jsonify({"error": f"Server error: {str(e)}"}), 500
 
-@auth_bp.route("/api/auth/login", methods=["POST"])
+@auth_bp.route("/login", methods=["POST"])
 def login():
     try:
         data = request.get_json()
@@ -81,13 +81,13 @@ def login():
         print(f"Login error: {str(e)}")
         return jsonify({"error": f"Server error: {str(e)}"}), 500
 
-@auth_bp.route("/api/auth/user", methods=["GET"])
+@auth_bp.route("/user", methods=["GET"])
 @token_required
 def get_current_user(current_user):
     user_data = {k: v for k, v in current_user.items() if k != "password"}
     return jsonify(user_data), 200
 
-@auth_bp.route("/api/auth/settings", methods=["PUT"])
+@auth_bp.route("/settings", methods=["PUT"])
 @token_required
 def update_settings(current_user):
     data = request.get_json()
